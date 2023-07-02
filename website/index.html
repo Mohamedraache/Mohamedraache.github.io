@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Writing Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add your custom CSS styles here */
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Technical Writing</h1>
+      <nav>
+        <ul>
+          <li><a href="#home" class="header-btn">Home</a></li>
+          <li><a href="#about" class="header-btn">About</a></li>
+          <li><a href="#services" class="header-btn">Services</a></li>
+          <li><a href="#contact" class="header-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Welcome to our Technical Writing Website</h1>
+      <p>Providing high-quality technical writing services</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="slideshow-container">
+        <img class="mySlides" src="about-image-1.jpg" alt="About Image 1">
+        <img class="mySlides" src="about-image-2.png" alt="About Image 2">
+        <img class="mySlides" src="about-image-3.jfif" alt="About Image 3">
+        <!-- Add more images as needed -->
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service">
+          <img src="service-image-1.jfif" alt="Service Image 1">
+          <h3>Technical Writing</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="service">
+          <img src="service-image-2.jfif" alt="Service Image 2">
+          <h3>Editing and Proofreading</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="service">
+          <img src="service-image-3.png" alt="Service Image 3">
+          <h3>Technical Documentation</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Technical Writing. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>
+
